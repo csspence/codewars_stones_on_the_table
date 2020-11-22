@@ -10,6 +10,13 @@ Examples:
 "RRRRGGGGBBBB" => 9
 */
 
-function solve(stones) {
-  return -1;
+const solve = (stones) => {
+  let counter = 0;
+  for(let i = 1; i < stones.length; i++) {
+    if(stones[i] === stones[i-1]) {
+      counter++;
+    }
+  }
+
+  return counter;
 }
